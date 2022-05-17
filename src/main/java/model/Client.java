@@ -17,11 +17,11 @@ public class Client extends Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    private Long id;
     @OneToMany
-    List<Deal> deals;
+    private List<Deal> deals;
 
-    Integer hours;
+    private Integer hours;
 
     @Override
     public boolean equals(Object o) {
