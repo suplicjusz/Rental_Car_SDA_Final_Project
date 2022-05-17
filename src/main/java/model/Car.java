@@ -16,14 +16,17 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    Integer dealId;
-    String mark;
-    String model;
-    String color;
-    BigDecimal rate;
-    BigDecimal income;
-    @ManyToMany
-    List<Deal> deals;
+    private Long id;
+    private Integer dealId;
+    private String mark;
+    private String model;
+    private String color;
+    private BigDecimal rate;
+    private BigDecimal income;
+    @OneToMany(mappedBy = "Car")
+    private List<Deal> deals;
+    @OneToOne
+    private  Department department;
+
 }
 

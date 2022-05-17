@@ -12,7 +12,7 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class Person {
 
-    String firstName;
-    String lastName;
+    private String firstName;
+    private String lastName;
 
 }

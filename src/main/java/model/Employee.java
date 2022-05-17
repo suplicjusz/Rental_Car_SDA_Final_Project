@@ -4,11 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
+
 
 @Entity
 @Data
@@ -17,20 +16,25 @@ import java.util.Objects;
 public class Employee extends Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    Integer deal;
+    private Long id;
+    @OneToMany
+    private List<Deal> deals;
+    @OneToOne
+    private Department departmentOfEmployee;
 
-    @Override         //after adding new fields refactor this method!
+    //equals & hashcode!
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Employee employee = (Employee) o;
-        return Objects.equals(id, employee.id) && Objects.equals(deal, employee.deal);
+        return Objects.equals(id, employee.id) && Objects.equals(deals, employee.deals) && Objects.equals(departmentOfEmployee, employee.departmentOfEmployee);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), id, deal);
+        return Objects.hash(super.hashCode(), id, deals, departmentOfEmployee);
     }
 }
