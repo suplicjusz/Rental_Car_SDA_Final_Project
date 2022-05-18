@@ -17,7 +17,6 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer dealId;
     private String mark;
     private String model;
     private String color;
@@ -26,7 +25,7 @@ public class Car {
     @OneToMany(mappedBy = "Car")
     private List<Deal> deals;
     @OneToOne
-    private  Department department;
+    private Department department;
 
 }
 
