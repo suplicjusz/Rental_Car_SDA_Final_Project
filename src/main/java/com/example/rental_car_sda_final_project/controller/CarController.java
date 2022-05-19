@@ -1,10 +1,10 @@
-package controller;
+package com.example.rental_car_sda_final_project.controller;
 
+import com.example.rental_car_sda_final_project.model.Car;
+import com.example.rental_car_sda_final_project.service.CarService;
 import lombok.RequiredArgsConstructor;
-import model.Car;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.CarService;
 
 import java.util.List;
 

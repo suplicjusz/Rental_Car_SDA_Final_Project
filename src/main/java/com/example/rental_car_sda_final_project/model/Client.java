@@ -1,4 +1,4 @@
-package model;
+package com.example.rental_car_sda_final_project.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,33 +8,31 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
-
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee extends Person {
+public class Client extends Person {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToMany
     private List<Deal> deals;
-    @OneToOne
-    private Department departmentOfEmployee;
 
-    //equals & hashcode!
+    private Integer hours;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Employee employee = (Employee) o;
-        return Objects.equals(id, employee.id) && Objects.equals(deals, employee.deals) && Objects.equals(departmentOfEmployee, employee.departmentOfEmployee);
+        Client client = (Client) o;
+        return Objects.equals(id, client.id) && Objects.equals(deals, client.deals) && Objects.equals(hours, client.hours);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), id, deals, departmentOfEmployee);
+        return Objects.hash(super.hashCode(), id, deals, hours);
     }
 }

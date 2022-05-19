@@ -1,4 +1,4 @@
-package model;
+package com.example.rental_car_sda_final_project.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +12,7 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class Person {
 
-    private String firstName;
-    private String lastName;
+    protected String firstName;
+    protected String lastName;
 
 }

@@ -1,9 +1,9 @@
-package service;
+package com.example.rental_car_sda_final_project.service;
 
 import lombok.RequiredArgsConstructor;
-import model.Deal;
+import com.example.rental_car_sda_final_project.model.Deal;
 import org.springframework.stereotype.Service;
-import repository.DealRepository;
+import com.example.rental_car_sda_final_project.repository.DealRepository;
 
 import java.util.List;
 
