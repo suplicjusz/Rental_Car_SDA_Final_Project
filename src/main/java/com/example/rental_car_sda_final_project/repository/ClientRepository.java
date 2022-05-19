@@ -1,6 +1,6 @@
-package repository;
+package com.example.rental_car_sda_final_project.repository;
 
-import model.Client;
+import com.example.rental_car_sda_final_project.model.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

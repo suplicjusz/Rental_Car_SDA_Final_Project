@@ -1,11 +1,10 @@
-package controller;
+package com.example.rental_car_sda_final_project.controller;
 
+import com.example.rental_car_sda_final_project.service.MonthStatsService;
 import lombok.RequiredArgsConstructor;
-import model.Deal;
-import model.MonthStats;
+import com.example.rental_car_sda_final_project.model.MonthStats;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.MonthStatsService;
 
 import java.util.List;
 

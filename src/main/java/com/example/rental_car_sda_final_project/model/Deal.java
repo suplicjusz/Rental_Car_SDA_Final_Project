@@ -1,4 +1,4 @@
-package model;
+package com.example.rental_car_sda_final_project.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +18,7 @@ public class Deal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private Car cars;
+    private Car car;
     @ManyToOne
     private Client client;
     //Employ, who operated release a Car and payment

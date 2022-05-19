@@ -1,4 +1,4 @@
-package model;
+package com.example.rental_car_sda_final_project.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

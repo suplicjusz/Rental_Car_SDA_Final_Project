@@ -1,4 +1,4 @@
-package model;
+package com.example.rental_car_sda_final_project.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,7 +22,7 @@ public class Car {
     private String color;
     private BigDecimal rate;
     private BigDecimal income;
-    @OneToMany(mappedBy = "Car")
+    @OneToMany(mappedBy = "car")
     private List<Deal> deals;
     @OneToOne
     private Department department;

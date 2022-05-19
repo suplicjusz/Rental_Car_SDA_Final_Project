@@ -1,9 +1,9 @@
-package service;
+package com.example.rental_car_sda_final_project.service;
 
 import lombok.RequiredArgsConstructor;
-import model.MonthStats;
+import com.example.rental_car_sda_final_project.model.MonthStats;
 import org.springframework.stereotype.Service;
-import repository.MonthStatsRepository;
+import com.example.rental_car_sda_final_project.repository.MonthStatsRepository;
 
 import java.util.List;
 
