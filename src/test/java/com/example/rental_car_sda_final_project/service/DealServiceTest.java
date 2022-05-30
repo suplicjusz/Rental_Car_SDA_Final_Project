@@ -40,6 +40,6 @@ class DealServiceTest {
         Assertions.assertEquals(BigDecimal.valueOf(999.99).add(BigDecimal.valueOf(0.01)), result);
              //Why BigDecimal round off the places after coma to one, when I write with two?
              // Assertions.assertEquals(BigDecimal.valueOf(1000.00), result) -> expected is "1000.0" ???
-             //.
+
     }
 }
