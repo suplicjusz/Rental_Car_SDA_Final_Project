@@ -21,8 +21,7 @@ public class Department {
     private List<Car> cars;
     @OneToMany
     private List<Employee> employeesOfDepartment;
-    @OneToMany
-    private List<Deal> dealsInDepartment;
+
 
 
 
