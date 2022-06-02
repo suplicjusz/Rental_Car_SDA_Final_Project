@@ -37,4 +37,14 @@ public class Employee extends Person {
     public int hashCode() {
         return Objects.hash(super.hashCode(), id, deals, departmentOfEmployee);
     }
+
+    @PostPersist
+    public void postPersist() {
+
+    }
+
+    @PostRemove
+    public void postRemove() {
+
+    }
 }
